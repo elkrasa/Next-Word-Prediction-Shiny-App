@@ -1,0 +1,53 @@
+Next Word Prediction App
+========================================================
+author: Elvira Sharipova
+date: 12/01/2021
+autosize: true
+
+Contents
+========================================================
+- Instructions on How to Use the App
+- Preparing Data for Prediction Algorithm
+- Prediction Algorithm Description
+- Links and Details
+
+Instructions on How to Use the App
+========================================================
+<font size="6"> The goal of this program was to create a product to highlight the prediction algorithm that was built and to provide an interface that can be accessed by others.</font>
+```{r,echo=FALSE}
+library(png)
+library(grid)
+appimg <- readPNG('E:/Programming/Datasciencecoursera/Capstone Project/WordPredictionApp/NextWordPredictionApp/NextWordAppSlides-figure/AppScreen.png')
+grid.raster(appimg)
+
+```
+***
+<font size="6"> A Shiny app takes as input a phrase (multiple words) in a text box input and outputs a prediction of the next word. Enter a word or multiple words to the text box area. Below the textbox area you will see Next Predicted Word.</font>
+Preparing Data for Prediction Algorithm
+========================================================
+<font size="6"> Large dataset of different words and sentences was downloaded. It was used 5% of original data set to create ngrams for prediction model.</font>
+```{r,echo=FALSE}
+library(png)
+library(grid)
+appimg <- readPNG('E:/Programming/Datasciencecoursera/Capstone Project/WordPredictionApp/NextWordPredictionApp/NextWordAppSlides-figure/Unigrams.png')
+grid.raster(appimg)
+```
+***
+<font size="6">Ngrams are most frequent combinations of 2,3,4 words. Sample data was cleaned and saved to .rds files to be used for prediction algorithm.
+</font>
+```{r,echo=FALSE}
+appimg1 <- readPNG('E:/Programming/Datasciencecoursera/Capstone Project/WordPredictionApp/NextWordPredictionApp/NextWordAppSlides-figure/Bigrams.png')
+grid.raster(appimg1)
+```
+Prediction Algorithm Description
+========================================================
+Depending on the amount of words the user is entering to the textbox, the program is defining what type of function need to be loaded. The principle of those funcions could be described
+as a filtering loaded .rds files and selecting the appropriate word from the most frequent ngrams.
+Links and Details
+========================================================
+<font size="5"> The app from this presentation was posted on Shiny server <https://support.rstudio.com/hc/en-us/articles/200486468>.
+For more details about source code please visit my github page <https://github.com/elkrasa/Next-Word-Prediction-Shiny-App>.</font>
+```{r,echo=FALSE}
+appimg1 <- readPNG('E:/Programming/Datasciencecoursera/Capstone Project/WordPredictionApp/NextWordPredictionApp/NextWordAppSlides-figure/WordsCloud.png')
+grid.raster(appimg1)
+```
